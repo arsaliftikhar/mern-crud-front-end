@@ -16,13 +16,13 @@ const AllUsers = () => {
   //delete user
   const deleteUser = (userId) => {
     axios
-      .delete("http://127.0.0.1:5000/delete-user/" + userId)
+      .delete("https://arsaliftikhar.up.railway.app/delete-user/" + userId)
       .then((result) => {
         console.log(result);
 
         //if result correct then refresh list of users
         axios
-          .get("http://127.0.0.1:5000/users")
+          .get("https://arsaliftikhar.up.railway.app/users")
           .then((result) => setUsers(result.data))
           .catch((error) => console.log(error));
       })

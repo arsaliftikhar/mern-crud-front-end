@@ -11,7 +11,7 @@ const UpdateUser = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:5000/find-user/" + id)
+      .get("https://arsaliftikhar.up.railway.app/find-user/" + id)
       .then((result) => setUser(result.data))
       .catch((error) => navigate("/"));
   }, [id, navigate]);
@@ -31,7 +31,7 @@ const UpdateUser = () => {
     };
 
     axios
-      .put("http://127.0.0.1:5000/update-user/", updatedData)
+      .put("https://arsaliftikhar.up.railway.app/update-user/", updatedData)
       .then((response) => {
         console.log(response);
         if (response.data) {
